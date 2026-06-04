@@ -1,13 +1,13 @@
 # Calculadora CLI: Apenas 4 opoerações básicas (adição, subtração, multiplicação e divisão).
 print("Bem-vindo à Calculadora CLI!")
-choice = input(
+CHOICE = input(
     "Escolha a operação (adição, subtração, multiplicação, divisão): ").strip().lower()
-if choice not in ['adição', 'subtração', 'multiplicação', 'divisão']:
+if CHOICE not in ['adição', 'subtração', 'multiplicação', 'divisão']:
     print("Operação inválida. Por favor, escolha uma das opções: adição, subtração, multiplicação, divisão.")
     exit(1)
 
 # Criar adição
-if choice == 'adição':
+if CHOICE == 'adição':
     raw_add = input("Digite os números para somar, separados por espaço: ")
 
     def add_all(*args):
@@ -16,7 +16,7 @@ if choice == 'adição':
     print(add_all(*map(float, raw_add.split())))
 
 # Criar subtraçã
-if choice == 'subtração':
+if CHOICE == 'subtração':
     raw_subtract = input(
         "Digite os números para subtrair, separados por espaço: ")
 
@@ -29,7 +29,7 @@ if choice == 'subtração':
     print(subtract_all(*map(float, raw_subtract.split())))
 
 # Criar multiplicação
-if choice == 'multiplicação':
+if CHOICE == 'multiplicação':
     raw_multiply = input(
         "Digite os números para multiplicar, separados por espaço: ")
 
@@ -42,7 +42,7 @@ if choice == 'multiplicação':
     print(multiply_all(*map(float, raw_multiply.split())))
 
 # Criar divisão
-if choice == 'divisão':
+if CHOICE == 'divisão':
     print(" Nota: A divisão por zero não é permitida.")
     print(" Nota: A divisão de decimal exige ponto final. Exemplo: 5.5")
     raw_divide = input(
